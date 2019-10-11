@@ -88,7 +88,9 @@ body{
         @media (min-width: 100px) and (max-width: 586px) {
           font-size: 50px;
         }
-
+        @media (min-width: 100px) and (max-width: 586px)and (min-height: 20px) and (max-height: 713px){
+          font-size: 40px;
+        }
 
       }
     }
@@ -103,6 +105,9 @@ body{
         }
         @media (min-width: 100px) and (max-width: 586px) {
           font-size: 34px;
+        }
+        @media (min-width: 100px) and (max-width: 586px)and (min-height: 20px) and (max-height: 713px){
+          font-size: 21px;
         }
       }
     }
@@ -132,7 +137,6 @@ body{
       text-align: center;
       height: 33%;
       div {
-        width: 30%;
         &:nth-child(1) {
           img {
             width: 66%;
@@ -168,6 +172,9 @@ body{
       @media (min-width: 586px) and (max-width: 672px){
         font-size:92px;
     }
+      @media (min-width: 100px) and (max-width: 586px)and (min-height: 20px) and (max-height: 713px){
+        font-size: 44px;
+      }
     }
     &__graph{
       text-align: center;
@@ -178,4 +185,19 @@ body{
   }
 
 }
-
+.weather{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30%;
+  margin-bottom: 20px;
+  &__day{
+    border-bottom: 1px solid #949494;
+  }
+  &__degree, &__day{
+    b,p{
+      color: rgb(119,25,33);
+      font-family: "Malgun Gothic";
+    }
+  }
+}
