@@ -5,11 +5,20 @@ body {
 .widget {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  display: -moz-grid;
+  display: -ms-grid;
+  -webkit-column-count:1;
+  -ms-grid-columns: 1fr 1fr;
+  -moz-column-count: 1;
 }
 @media (min-width: 100px) and (max-width: 586px) {
   .widget {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 20% 30%;
+    -webkit-column-count: 1;
+    -ms-grid-columns: 1fr;
+    -moz-column-count: 1;
+    -ms-grid-rows: 20% 30%;
   }
 }
 @media screen and (min-width: 587px) and (max-width: 992px) {
@@ -31,6 +40,12 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 52% 1fr 1fr;
+  display: -moz-grid;
+  display: -ms-grid;
+  -webkit-column-count: 1;
+  -ms-grid-columns: 1fr;
+  -moz-column-count: 1;
+  -ms-grid-rows: 52% 1fr 1fr;
   background-size: cover;
   background-image: url("../../../img/bg_pic.jpg");
 }
@@ -105,6 +120,10 @@ body {
   .widget__main {
     grid-template-columns: 1fr;
     grid-template-rows: 36% 30% 39%;
+    -ms-grid-rows: 36% 30% 39%;
+    -webkit-column-count: 1;
+    -ms-grid-columns: 1fr;
+    -moz-column-count: 1;
   }
 }
 .widget__info {
@@ -112,23 +131,42 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 100% 1fr 1fr;
+  display: -moz-grid;
+  display: -ms-grid;
+  -webkit-column-count: 1;
+  -ms-grid-columns: 1fr;
+  -moz-column-count: 1;
+  -ms-grid-rows: 100% 1fr 1fr;
 }
 .widget__info__body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 14em 11em 60em;
+  display: -moz-grid;
+  display: -ms-grid;
+  -webkit-column-count: 1;
+  -ms-grid-columns: 1fr;
+  -moz-column-count: 1;
+  -ms-grid-rows: 14em 11em 60em;
   width: 70%;
   margin: 0 auto;
 }
 @media (min-width: 100px) and (max-width: 586px) {
   .widget__info__body {
     grid-template-rows: 5em 9em 82em;
+    -ms-grid-rows: 5em 9em 82em;
   }
 }
 .widget__info__next-days {
   display: grid;
   grid-template-columns: repeat(3, 3fr);
   grid-template-rows: repeat(3, 300px);
+  display: -moz-grid;
+  display: -ms-grid;
+  -webkit-column-count: 3;
+  -ms-grid-columns: 3fr;
+  -moz-column-count: 3;
+  -ms-grid-rows: 300px 300px 300px;
   text-align: center;
   height: 33%;
 }
@@ -189,6 +227,12 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 26%);
+  display: -moz-grid;
+  display: -ms-grid;
+  -webkit-column-count: 1;
+  -ms-grid-columns: 1fr;
+  -moz-column-count: 1;
+  -ms-grid-rows: 26% 26% 26%;
   margin: 20px;
 }
 .weather__day {

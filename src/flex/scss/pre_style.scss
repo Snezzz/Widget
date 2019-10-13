@@ -3,6 +3,29 @@
   flex-direction: $flex-direction;
   justify-content: $justify-content;
 }
+@mixin make_display(){
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: -o-flex;
+}
+@mixin make_direction($direction_type){
+  -webkit-flex-direction: $direction_type;
+  -ms-flex-direction: $direction_type;
+}
+@mixin make_justify($justify_content){
+  -webkit-justify-content: $justify_content;
+  -ms-flex-pack: justify;
+  -moz-box-pack: justify;
+}
+@mixin make_align_content($align_content){
+  -webkit-align-content: $align_content;
+  -ms-flex-align: $align_content;
+}
+@mixin make_align_items($align){
+  -webkit-align-items: $align;
+  -ms-flex-align: $align;
+}
 @mixin set_size($width,$height){
   width: $width;
   height: $height
@@ -12,16 +35,20 @@ body{
   background-color: rgba(157,163,114,80%);
 }
 .widget{
-
   display: flex;
   flex-direction: row;
   justify-content: center;
+  @include make_display;
+  @include make_direction(row);
+  @include make_justify(center);
+
   &__main, &__info{
     @include set_size((50%),(52%));
   }
   @media (min-width: 100px) and (max-width: 586px) {
     & {
       flex-direction: column;
+      @include make_direction(column);
     }
     &__main, &__info {
       @include set_size((100%), (52%));
@@ -30,6 +57,7 @@ body{
   @media screen and (min-width: 587px) and (max-width: 992px) {
     &{
       flex-direction: row;
+      @include make_direction(row);
     }
     &__main, &__info{
       height: 767px;
@@ -39,6 +67,7 @@ body{
   @media (min-width: 993px) and (max-width: 1999px) {
     &{
       flex-direction: row;
+      @include make_direction(row)
     }
     &__main, &__info{
       height: 767px;
@@ -47,6 +76,7 @@ body{
   @media (min-width: 1200px) {
     &{
       flex-direction: row;
+      @include make_direction(row);
     }
     &__main, &__info{
       height: 767px;
@@ -57,6 +87,9 @@ body{
     display: flex;
     flex-direction: column;
     align-content: end;
+    @include make_display;
+    @include make_direction(column);
+    @include make_align_content(flex-end);
     background-size: cover;
     background-image: url("../../../img/bg_pic.jpg");
     &__icon, &__weather, &__date{
@@ -67,6 +100,9 @@ body{
       display: flex;
       align-items: center;
       justify-content: center;
+      @include make_display();
+      @include make_justify(center);
+      @include make_align_items(center);
       img{
         width:200px;
       }
@@ -115,18 +151,27 @@ body{
       display: flex;
       justify-content: center;
       align-items: center;
+      @include make_display();
+      @include make_justify(center);
+      @include make_align_items(center);
       height: 24%;
     }
   }
   &__info {
-    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include make_display();
+    @include make_direction(column);
+    @include make_align_items(center);
+    background-color: white;
     &__body{
       display: flex;
       flex-direction: column;
       justify-content: center;
+      @include make_display();
+      @include make_direction(column);
+      @include make_justify(center);
       @include set_size(70%,100%);
       margin: 0 auto;
     }
@@ -134,6 +179,8 @@ body{
       display: flex;
       padding-top: 6%;
       justify-content: space-between;
+      @include make_display();
+      @include make_justify(space-between);
       text-align: center;
       height: 33%;
       div {
@@ -189,6 +236,9 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  @include make_display();
+  @include make_direction(column);
+  @include make_justify(space-around);
   width: 30%;
   margin-bottom: 20px;
   &__day{
