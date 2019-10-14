@@ -168,15 +168,32 @@ body{
           img {
             width: 66%;
           }
+          @media (min-width: 1200px) {
+            img {
+              width: 40%;
+            }
+          }
+
+
         }
         &:nth-child(2) {
           img {
             width: 80%;
           }
+          @media (min-width: 1200px) {
+            img {
+              width: 40%;
+            }
+          }
         }
         &:nth-child(3) {
           img {
             width: 81%;
+          }
+          @media (min-width: 1200px) {
+            img {
+              width: 40%;
+            }
           }
         }
       }
@@ -211,7 +228,7 @@ body{
       overflow-x: auto;
       text-align: center;
       img{
-        width: 495px;
+        width: 473px;
         @media (min-width: 100px) and (max-width: 586px) {
           width: 365px;
         }

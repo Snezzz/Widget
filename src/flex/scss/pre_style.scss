@@ -188,15 +188,30 @@ body{
           img {
             width: 66%;
           }
+          @media (min-width: 1200px) {
+            img {
+              width: 41%;
+            }
+          }
         }
         &:nth-child(2) {
           img {
             width: 80%;
           }
+          @media (min-width: 1200px) {
+            img {
+              width: 48%;
+            }
+          }
         }
         &:nth-child(3) {
           img {
             width: 81%;
+          }
+          @media (min-width: 1200px) {
+            img {
+              width: 48%;
+            }
           }
         }
       }

@@ -72,7 +72,7 @@ body {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   -webkit-align-content: flex-end;
-  -ms-flex-align: end;
+  -ms-flex-align: flex-end;
   background-size: cover;
   background-image: url("../../../img/bg_pic.jpg");
 }
@@ -185,8 +185,8 @@ body {
   display: -ms-flex;
   display: -webkit-flex;
   display: -o-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   -webkit-justify-content: center;
   -ms-flex-pack: justify;
   -moz-box-pack: justify;
@@ -211,11 +211,26 @@ body {
 .widget__info__next-days div:nth-child(1) img {
   width: 66%;
 }
+@media (min-width: 1200px) {
+  .widget__info__next-days div:nth-child(1) img {
+    width: 41%;
+  }
+}
 .widget__info__next-days div:nth-child(2) img {
   width: 80%;
 }
+@media (min-width: 1200px) {
+  .widget__info__next-days div:nth-child(2) img {
+    width: 48%;
+  }
+}
 .widget__info__next-days div:nth-child(3) img {
   width: 81%;
+}
+@media (min-width: 1200px) {
+  .widget__info__next-days div:nth-child(3) img {
+    width: 48%;
+  }
 }
 .widget__info__degree, .widget__info__graph {
   border-bottom: 1px solid black;
